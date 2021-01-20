@@ -8,17 +8,16 @@ net session >nul 2>&1 || goto :admin
 if not exist wsl.wprp (echo wsl.wprp not found && exit /b 1)
 if not exist networking.sh (echo networking.sh not found && exit /b 1)
 
-
-:: Stop WSL
-sc stop LxssManager
-
 :: List all HNS objects
 echo HNS objects: 
 hnsdiag list all -df
 
 :: The WSL HNS network is created once per boot. Resetting it to collect network creation logs
 echo Deleting HNS network
-hnsdiag reset networks
+wsl hnsdiag.exe delete networks $(hnsdiag.exe list networks  ^| tr -d '\r\n' ^| sed -n 's/^.*Network : \([0-9a-fA-F\-]*\)    Name             : WSL.*/\1/p')
+
+:: Stop WSL
+sc stop LxssManager
 
 :: Collect WSL logs
 wpr -start wsl.wprp -filemode || goto :fail
