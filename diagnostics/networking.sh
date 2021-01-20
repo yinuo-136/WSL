@@ -12,8 +12,12 @@ ip route show
 
 # Validate that the gateway is responsive and can route ICMP correctly
 gateway=$(ip route show | awk '/default/ { print $3 }')
-ping -c 4 "$gateway"
-ping -c 4 1.1.1.1
+if [ $? != '0' ]; then
+    echo 'No gateway found'
+else
+    ping -c 4 "$gateway"
+    ping -c 4 1.1.1.1
+fi
 
 # Validate that the default route is working (won't work if traceroute isn't installed)
 traceroute 1.1.1.1
