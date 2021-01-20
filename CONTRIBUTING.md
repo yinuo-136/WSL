@@ -113,7 +113,7 @@ Availability  Capabilities  CapabilityDescriptions                              
 If the issue is about networking, run [networking.bat](https://github.com/Microsoft/WSL/blob/master/diagnostics/networking.bat) in an administrative command prompt:
 
 ```
-$ git clone https://github.com/microsoft/WSL --depth =1 %tmp%\WSL
+$ git clone https://github.com/microsoft/WSL --depth=1 %tmp%\WSL
 $ cd %tmp%\WSL\diagnostics
 $ networking.bat
 ```

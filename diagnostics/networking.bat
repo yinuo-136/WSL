@@ -18,8 +18,7 @@ hnsdiag list all -df
 
 :: The WSL HNS network is created once per boot. Resetting it to collect network creation logs
 echo Deleting HNS network
-hnsdiag delete networks "C08CB7B8-9B3C-408E-8E30-5E16A3AEB444"
-
+hnsdiag reset networks
 
 :: Collect WSL logs
 wpr -start wsl.wprp -filemode || goto :fail
