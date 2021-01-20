@@ -22,7 +22,7 @@ hnsdiag reset networks
 
 :: Collect WSL logs
 wpr -start wsl.wprp -filemode || goto :fail
-wsl tr -d "'\r'" ^| bash < ./networking.sh
+wsl tr -d "\r" ^| bash < ./networking.sh
 wpr -stop wsl.etl || goto :fail
 
 exit /b 0

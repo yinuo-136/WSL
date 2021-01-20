@@ -16,8 +16,9 @@ if [ $? != '0' ]; then
     echo 'No gateway found'
 else
     ping -c 4 "$gateway"
-    ping -c 4 1.1.1.1
 fi
+
+ping -c 4 1.1.1.1
 
 # Validate that the default route is working (won't work if traceroute isn't installed)
 traceroute 1.1.1.1
@@ -26,5 +27,5 @@ traceroute 1.1.1.1
 cat /etc/resolv.conf
 
 # Validate that everything is functionning correctly
-curl -m 5000 -v https://microsoft.com
+curl -m 5 -v https://microsoft.com
 
