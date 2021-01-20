@@ -19,6 +19,7 @@
     <EventProvider Id="mup" Name="20c46239-d059-4214-a11e-7d6769cbe020" />
     <EventProvider Id="rfsmon" Name="51734B23-5B7E-4892-BA8E-45BC110B735C" />
     <EventProvider Id="hyperv_storage" Name="c7ad62c6-5c99-5a1b-bbc4-0821ae5b765e" />
+    <EventProvider Id="hns" Name="0c885e0d-6eb6-476c-a048-2457eed3a5c1" />
     <Profile
       Id="WSL.Verbose.File"
       Name="WSL"
@@ -42,6 +43,7 @@
             <EventProviderId Value="mup"/>
             <EventProviderId Value="rfsmon"/>
             <EventProviderId Value="hyperv_storage"/>
+            <EventProviderId Value="hns"/>
           </EventProviders>
         </EventCollectorId>
       </Collectors>
