@@ -14,14 +14,14 @@ hnsdiag list all -df
 
 :: The WSL HNS network is created once per boot. Resetting it to collect network creation logs
 echo Deleting HNS network
-wsl hnsdiag.exe delete networks $(hnsdiag.exe list networks  ^| tr -d '\r\n' ^| sed -n 's/^.*Network : \([0-9a-fA-F\-]*\)    Name             : WSL.*/\1/p')
+wsl.exe hnsdiag.exe delete networks $(hnsdiag.exe list networks  ^| tr -d '\r\n' ^| sed -n 's/^.*Network : \([0-9a-fA-F\-]*\)    Name             : WSL.*/\1/p')
 
 :: Stop WSL
-sc stop LxssManager
+net.exe stop LxssManager
 
 :: Collect WSL logs
 wpr -start wsl.wprp -filemode || goto :fail
-wsl tr -d "\r" ^| bash < ./networking.sh
+wsl.exe tr -d "\r" ^| bash < ./networking.sh
 wpr -stop wsl.etl || goto :fail
 
 exit /b 0
