@@ -3,7 +3,7 @@
   <Profiles>
     <EventCollector Id="Collector" Name="Collector">
       <BufferSize Value="256"/>
-      <Buffers Value="1024"/>
+      <Buffers Value="4096"/>
     </EventCollector>
 
     <EventProvider Id="lxcore_kernel" Name="0CD1C309-0878-4515-83DB-749843B3F5C9"/>
@@ -145,7 +145,7 @@
     <EventProvider Id="IPNat" Name="AE3F6C6D-BF2A-4291-9D07-59E661274EE3" />
     <EventProvider Id="IpNatHlp" Name="9B322459-4AD9-4F81-8EEA-DC77CDD18CA6" />
     <EventProvider Id="WinNatSys" Name="aa7387cf-3639-496a-b3bf-dc1e79a6fc5a" />
-    <EventProvider Id="TcpIp" Name="2F07E2EE-15DB-40F1-90EF-9D7BA282188A" />
+    <EventProvider Id="Microsoft-Windows-TCPIP" Name="2f07e2ee-15db-40f1-90ef-9d7ba282188a" NonPagedMemory="true" EventKey="true" Strict="true"/>
     <EventProvider Id="WinNat" Name="66C07ECD-6667-43FC-93F8-05CF07F446EC" />
     <EventProvider Id="VmSwitch" Name="67DC0D66-3695-47C0-9642-33F76F7BD7AD" />
     <Profile
@@ -284,7 +284,7 @@
             <EventProviderId Value="IpNatHlp"/>
             <EventProviderId Value="WinNat"/>
             <EventProviderId Value="WinNatSys"/>
-            <EventProviderId Value="TcpIp"/>
+            <EventProviderId Value="Microsoft-Windows-TCPIP"/>
             <EventProviderId Value="VmSwitch"/>
           </EventProviders>
         </EventCollectorId>
