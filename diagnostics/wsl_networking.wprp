@@ -144,7 +144,10 @@
     <EventProvider Id="Microsoft_Windows_BrokerInfrastructure_WPP" Name="63B6C2D2-0440-44DE-A674-AA51A251B123" />
     <EventProvider Id="IPNat" Name="AE3F6C6D-BF2A-4291-9D07-59E661274EE3" />
     <EventProvider Id="IpNatHlp" Name="9B322459-4AD9-4F81-8EEA-DC77CDD18CA6" />
-    <EventProvider Id="WinNat" Name="aa7387cf-3639-496a-b3bf-dc1e79a6fc5a" />
+    <EventProvider Id="WinNatSys" Name="aa7387cf-3639-496a-b3bf-dc1e79a6fc5a" />
+    <EventProvider Id="TcpIp" Name="2F07E2EE-15DB-40F1-90EF-9D7BA282188A" />
+    <EventProvider Id="WinNat" Name="66C07ECD-6667-43FC-93F8-05CF07F446EC" />
+    <EventProvider Id="VmSwitch" Name="67DC0D66-3695-47C0-9642-33F76F7BD7AD" />
     <Profile
       Id="WSL.Verbose.File"
       Name="WSL"
@@ -280,6 +283,9 @@
             <EventProviderId Value="IPNat"/>
             <EventProviderId Value="IpNatHlp"/>
             <EventProviderId Value="WinNat"/>
+            <EventProviderId Value="WinNatSys"/>
+            <EventProviderId Value="TcpIp"/>
+            <EventProviderId Value="VmSwitch"/>
           </EventProviders>
         </EventCollectorId>
       </Collectors>
