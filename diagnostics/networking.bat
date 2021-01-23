@@ -5,7 +5,7 @@
 net session >nul 2>&1 || goto :admin
 
 :: Validate that required files are here
-if not exist wsl.wprp (echo wsl.wprp not found && exit /b 1)
+if not exist wsl_networking.wprp (echo wsl_networking.wprp not found && exit /b 1)
 if not exist networking.sh (echo networking.sh not found && exit /b 1)
 
 :: List all HNS objects
@@ -20,7 +20,7 @@ powershell.exe -NoProfile "Get-HnsNetwork | Where-Object {$_.Name -eq 'WSL'} | R
 net.exe stop LxssManager
 
 :: Collect WSL logs
-wpr -start wsl.wprp -filemode || goto :fail
+wpr -start wsl_networking.wprp -filemode || goto :fail
 wsl.exe tr -d "\r" ^| bash < ./networking.sh
 wpr -stop wsl.etl || goto :fail
 
