@@ -133,12 +133,13 @@ Once the script execution is completed, include **both** its output and the gene
 <div id="9-networking-logs"></div>
 
 
-#### 8) Record WSL logs (recommended method)
+#### 8) Collect WSL logs (recommended method)
 
 To collect WSL logs, download and execute [collect-wsl-logs.ps1](https://github.com/Microsoft/WSL/blob/master/diagnostics/collect-wsl-logs.ps1) in an administrative powershell prompt:
 
 ```
 Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/WSL/master/diagnostics/collect-wsl-logs.ps1" -OutFile collect-wsl-logs.ps1
+Set-ExecutionPolicy Bypass -Scope Process -Force
 .\collect-wsl-logs.ps1
 ```
 The scipt will output the path of the log file once done.
@@ -180,4 +181,3 @@ To collect WSL logs follow these steps:
 - Get a link to your feedback item by clicking on 'Share my Feedback' and post that link to the Github thread so we can easily get to your feedback!
 
 ![GIF Of networking instructions](img/networkinglog4.gif)
-
