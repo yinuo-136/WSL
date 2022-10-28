@@ -3,7 +3,7 @@
 [CmdletBinding()]
 Param (
     $LogProfile = $null,
-    [switch]$Dump=$false
+    [switch]$Dump = $false
    )
 
 Set-StrictMode -Version Latest
