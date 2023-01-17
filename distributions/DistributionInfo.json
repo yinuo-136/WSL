@@ -6,8 +6,8 @@
             "StoreAppId": "9PDXGNCFSCZV",
             "Amd64": true,
             "Arm64": true,
-            "Amd64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu_2204-221101_x64.appx",
-            "Arm64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu_2204-221101_ARM64.appx",
+            "Amd64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2204-220117.appx",
+            "Arm64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2204-220117_ARM64.appx",
             "PackageFamilyName": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
         },
         {
@@ -69,6 +69,16 @@
             "Amd64PackageUrl": "https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_x64.appx",
             "Arm64PackageUrl": "https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_ARM64.appx",
             "PackageFamilyName": "CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc"
+        },
+	{
+            "Name": "Ubuntu-22.04",
+            "FriendlyName": "Ubuntu 22.04 LTS",
+            "StoreAppId": "9PN20MSR04DW",
+            "Amd64": true,
+            "Arm64": true,
+            "Amd64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2204LTS-230117.appx",
+            "Arm64PackageUrl": "https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2204LTS-230117_ARM64.appx",
+            "PackageFamilyName": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
         },
         {
             "Name": "OracleLinux_8_5",
